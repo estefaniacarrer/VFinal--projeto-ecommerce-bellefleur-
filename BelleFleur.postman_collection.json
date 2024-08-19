@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "7a955c32-bdc4-4f6a-a366-929a3149386c",
+		"name": "BelleFleur",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24322573",
+		"_collection_link": "https://dark-trinity-192414.postman.co/workspace/41c0b865-7d3d-4a21-8bbb-6e0f64e1d563/collection/24322573-7a955c32-bdc4-4f6a-a366-929a3149386c?action=share&source=collection_link&creator=24322573"
+	},
+	"item": [
+		{
+			"name": "2_Produto",
+			"item": [
+				{
+					"name": "produto/create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nomeProduto",
+									"value": "Perfume Accordes",
+									"type": "text"
+								},
+								{
+									"key": "precoPadrao",
+									"value": "200.00",
+									"type": "text"
+								},
+								{
+									"key": "precoPromocional",
+									"value": "180.00",
+									"type": "text"
+								},
+								{
+									"key": "imagem",
+									"type": "file",
+									"src": "QM4leY6JC/Perfume1.jpg"
+								},
+								{
+									"key": "categoria",
+									"value": "Perfume Feminino",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}produto/create",
+							"host": [
+								"{{URL}}produto"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produto/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}produto/produtos",
+							"host": [
+								"{{URL}}produto"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produto/delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}produto/66bea96bb55976a249087e1a",
+							"host": [
+								"{{URL}}produto"
+							],
+							"path": [
+								"66bea96bb55976a249087e1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produto/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nomeProduto",
+									"value": "Fragrancia Linda",
+									"type": "text"
+								},
+								{
+									"key": "precoPadrao",
+									"value": "150",
+									"type": "text"
+								},
+								{
+									"key": "categoria",
+									"value": "Essencia Feminina",
+									"type": "text"
+								},
+								{
+									"key": "imagem",
+									"type": "file",
+									"src": "ayeNHSCJE/Perfume10.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}produto/66bea96bb55976a249087e1a",
+							"host": [
+								"{{URL}}produto"
+							],
+							"path": [
+								"66bea96bb55976a249087e1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produto/getId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}produto/66bea96bb55976a249087e1a",
+							"host": [
+								"{{URL}}produto"
+							],
+							"path": [
+								"66bea96bb55976a249087e1a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "produto/getname",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}produto/?nomeProduto=Perfume Linda",
+							"host": [
+								"{{URL}}produto"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "nomeProduto",
+									"value": "Perfume Linda"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3_Sacola",
+			"item": [
+				{
+					"name": "sacola/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produtoId\": \"66beb937392b439301d69f43\",\r\n  \"quantidade\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/sacola/add",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"sacola",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sacola/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}user/sacola",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"sacola"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sacola/delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}user/sacola/66beb937392b439301d69f43",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"sacola",
+								"66beb937392b439301d69f43"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4_Favoritos",
+			"item": [
+				{
+					"name": "sacola/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"produtoId\": \"66beb937392b439301d69f43\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/favoritos/add",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"favoritos",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sacola/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}user/favoritos",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"favoritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sacola/delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}user/favoritos/66beb937392b439301d69f43",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"favoritos",
+								"66beb937392b439301d69f43"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "1_Usuario",
+			"item": [
+				{
+					"name": "user/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Alice\",\r\n  \"cpf\": \"123.456.789-12\",\r\n  \"dataNascimento\": \"1990-01-01\",\r\n  \"email\": \"alice@example.com\",\r\n  \"senha\": \"senha123\",\r\n  \"confirmaSenha\": \"senha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/register",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"joao.silva@example.com\",\r\n    \"senha\": \"senha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/login",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/check",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}user/checkuser",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"checkuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}user/66be9edf4e081bf067ef30a9",
+							"host": [
+								"{{URL}}user"
+							],
+							"path": [
+								"66be9edf4e081bf067ef30a9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiSm_Do28gZGEgU2lsdiIsImlkIjoiNjZiZTllZGY0ZTA4MWJmMDY3ZWYzMGE5IiwiaWF0IjoxNzIzNzc4Mjk4fQ.9Oi5dfjpy1FK7txI9WzIrsZVYkHDUe0daTCFImcfSAc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiQWxpY2UiLCJpZCI6IjY1YzE0ZjVkMjFkZGE2ZjkzYTQxZDQ3NyIsImlhdCI6MTcwNzE2NzU4MX0.NmBR5m6ernCSWc0WAU0C2RugdQ9CaU3TIcivXKkcUgs",
+			"type": "string"
+		}
+	]
+}

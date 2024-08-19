@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./assets/icon-flower.png" type="image-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>BelleFleur</title>
+</head>
+
+<hr>
+<body>
+    <header class="header">
+
+        <section class="header-top">
+            <p>Semana com frete grátis para todo Brasil <strong> - Compras acima de R$ 99,90 </strong></p>
+        </section>
+
+        <section class="header-principal">
+
+            <!-- alteração -->
+            <div class="container">
+                <input type="checkbox" id="menu" class="container__botao">
+                <label for="menu" class="container__rotulo">
+                    <span class="cabecalho__menu-hamburguer container__imagem"></span>
+                </label>
+
+                <!-- Menu Hamburguer -->
+                <ul class="lista-menu">
+                    <li class="lista-menu__titulo">Categoria</li>
+                    <li class="lista-menu__item"><a href="#lancamentos" class="lista-menu__link">Lançamentos</a></li>
+                    <li class="lista-menu__item"><a href="#promocao" class="lista-menu__link">Promoções</a></li>
+                    <li class="lista-menu__item"><a href="#" class="lista-menu__link">Presentes</a></li>
+                    <li class="lista-menu__item"><a href="#" class="lista-menu__link">Perfumaria</a></li>
+                    <li class="lista-menu__item"><a href="#" class="lista-menu__link">Corpo</a></li>
+                    <li class="lista-menu__item"><a href="#" class="lista-menu__link">Make</a></li>
+                    <li class="lista-menu__item"><a href="#" class="lista-menu__link">Cabelos</a></li>
+                    <li class="lista-menu__item"><a href="#" class="lista-menu__link">Skincare</a></li>
+                    <li class="lista-menu__item"><a href="#" class="lista-menu__link">Acessórios</a></li>
+                </ul>
+            </div>
+
+
+            <!-- alteração -->
+
+
+            <div class="header-titulo">
+                <h1>BelleFleur</h1>
+                <img src="./assets/icon-flower.png" alt="Logo Belle Fleur" class="header-titulo-imagem">
+            </div>
+
+            <nav>
+                <div class="nav-container">
+                    <div class="input-search">
+                        <input type="text" placeholder="O que você procura hoje?">
+                        <div>
+                            <img src="./assets/pesquisa.png" alt="search" class="search-lupa">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-links">
+                    <a href="" class="text-icons-loc"><img src="./assets/localizar.png" alt="Icone de Localização">
+                        <p>Localização</p>
+                    </a>
+                    <a href="conta.html"><img src="./assets/minha-conta.png" alt="Icone para login">
+                        <p> Minha Conta</p>
+                    </a>
+                    <a href="index.html"><img src="./assets/home.png" alt="Icone de Pagina Inicial"></a>
+                    <a href=""><img src="./assets/favoritos.png" alt="Icone de Localização"></a>
+                    <a href=""><img src="./assets/sacola.png" alt="Icone para login"></a>
+                </div>
+
+            </nav>
+        </section>
+
+        <!-- Menu -->
+        <div class="header-menu">
+            <a href="#lancamentos">Lançamentos</a>
+            <a href="#promocao">Promoções</a>
+            <a href="#">Presentes</a>
+            <a href="#">Perfumaria</a>
+            <a href="#">Corpo</a>
+            <a href="#">Make</a>
+            <a href="#">Cabelos</a>
+            <a href="#">Skincare</a>
+            <a href="#">Acessórios</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- banner -->
+        <section class="banner-container">
+            <div class="swiper-container">
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+        
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./assets/banner1.png" alt="Banner Lançamento"></div>
+                    <div class="swiper-slide"><img src="./assets/banner2.png" alt="Banner Produtos para Eles"></div>
+                    <div class="swiper-slide"><img src="./assets/banner3.png" alt="Banner Make"></div>
+                    <div class="swiper-slide"><img src="./assets/banner4.png" alt="Banner Produtos Capilares"></div>
+                    <div class="swiper-slide"><img src="./assets/banner5.png" alt="Banner Make"></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        
+
+        <!-- Lançamentos -->
+
+        <section class="section-produtos">
+            <h2 id="lancamentos" class="section-produtos-title">Últimos Lançamentos</h2>
+            <div class="container-produtos">
+
+                <!-- produto 1 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale"></span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/PF5.png" alt="">
+
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Kit Essência Sinfonia Floral Desodorante Colônia 50 ml</h2>
+                        <p class="card-valor">R$ <span>189,90</span></p>
+                        <a onclick="addCart()" class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 3 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale"></span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/PM1.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Eclipse Noturno Desodorante Colônia 100ml</h2>
+                        <p class="card-valor">R$ 219,90</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 3 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale"></span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/PF4.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Sedução Floral Desodorante Colônia 75ml</h2>
+                        <p class="card-valor">R$ 198,90</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 4 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale"></span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/MB2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Pó Translucido Antibrilho com acabamento impecável e pele radiante o dia
+                            todo 10g</h2>
+                        <p class="card-valor">R$ 89,90</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Mais Vendidos -->
+
+        <section class="section-produtos">
+            <h2 class="section-produtos-title">Mais Vendidos</h2>
+            <div class="container-produtos">
+
+                <!-- produto 1 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale"></span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/SC1.jpg" alt="">
+
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Kit Essência Revitalizante - Cuidados para sua pele</h2>
+                        <p class="card-valor">R$ <span>159,90</span></p>
+                        <a onclick="addCart()" class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 2 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale"></span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/PF1.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Flor de Primavera Desodorante Colônia 100ml</h2>
+                        <p class="card-valor">R$ 139,90</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 3 -->
+                <div class="card">
+                    <a class="border" href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale"></span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/CB1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Kit Renovação Total com Mascará e Reparador</h2>
+                        <p class="card-valor">R$ 319,90</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 4 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale"></span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/MB3.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Paleta de Sombra Sutil Unitária Rosa Fucsia 8g</h2>
+                        <p class="card-valor">R$ 69,90</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promoções da Semana -->
+
+        <section class="section-produtos">
+            <h2 id="promocao" class="section-produtos-title">Promoções da Semana</h2>
+            <div class="container-produtos">
+
+                <!-- produto 1 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale">-15%</span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/CB2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Kit Hidratantes Corporais Noite-Dia-Brilho Glamour100ml</h2>
+                        <p class="card-valor-real">R$<span>330,00</span></p>
+                        <p class="card-valor">R$ 280,50</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 2 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale">-10%</span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/SC2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Sérum Reparador Nutrição e Hidratação 30ml</h2>
+                        <p class="card-valor-real">R$<span>129,00</span></p>
+                        <p class="card-valor">R$ 116,10</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 3 -->
+                <div class="card">
+                    <a class="border" href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale">-15%</span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/PM4.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Essência Urbana Desodorante Colônia 75ml</h2>
+                        <p class="card-valor-real">R$<span>189,00</span></p>
+                        <p class="card-valor">R$ 160,60</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- produto 4 -->
+                <div class="card">
+                    <a href="#">
+                        <img class="favorito" src="./assets/favoritos.png" />
+                    </a>
+                    <span class="sale">-10%</span>
+                    <div class="image">
+                        <img class="card-image" src="./assets/produtos/PF6.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h2 class="card-titulo">Sedução Noturna Desodorante Colônia 100ml</h2>
+                        <p class="card-valor-real">R$<span>225,00</span></p>
+                        <p class="card-valor">R$ 202,50</p>
+                        <a class="card-button" href="">
+                            <p>Comprar</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cadastro -->
+
+        <section class="contato">
+            <div class="contato__descricao">
+                <h2 class="contato__titulo">Fique por dentro das novidades</h2>
+                <p class="contato__texto">Seja o primeiro a saber dos lançamentos, promoções e muito mais!!</p>
+            </div>
+            <input type="email" placeholder="Cadastre seu e-mail" class="contato__email">
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+
+    </hr>
+    <footer class="rodape">
+        <h2 class="rodape__titulo">BelleFleur</h2>
+
+        <!--------------- rodapé omitido -------------->
+        <ul class="lista-rodape">
+            <li class="lista-rodape__titulo">Dúvidas</li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Perguntas Frequentes</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Formas de Pagamento</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Frete e Entregas</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Trocas e Devoluções</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Mapa do Site</a></li>
+        </ul>
+
+        <ul class="lista-rodape">
+            <li class="lista-rodape__titulo">Institucional</li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Nossa História</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Clube de Vantagens</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Trabalhe Conosco</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Portal do Revendedor</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Blog</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Onde Comprar</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Faça sua Make</a></li>
+        </ul>
+
+        <ul class="lista-rodape">
+            <li class="lista-rodape__titulo">Sustentabilidade</li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Nossos Projetos</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Reciclagem</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Plástico Verde</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Refil</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Produtos Veganos</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Cruelty Free</a></li>
+            <li class="lista-rodape__item"><a href="#" class="lista-rodape__link">Beleza Transparente</a></li>
+        </ul>
+        <!-- rodapé omitido -->
+
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script/carrossel.js"></script>
+
+</body>
+
+</html>
